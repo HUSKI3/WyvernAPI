@@ -29,6 +29,7 @@ write up WIP
  ]
 ```
 ---
+## Get a user:
 ```js
  Get User route
  enters:
@@ -50,6 +51,7 @@ write up WIP
  ]
 ```
 ---
+## Get user info
 ```js
  Get User Info route
  enters:
