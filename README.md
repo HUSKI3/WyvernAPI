@@ -1,6 +1,6 @@
 # WyvernAPI
 > The API Docs for Wyvern
-
+> current API route: http://78.141.209.47:3031/
 ## How to connect?
 Different languages have different ways to access it.
 write up WIP
