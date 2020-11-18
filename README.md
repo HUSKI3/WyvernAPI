@@ -9,6 +9,7 @@ write up WIP
 ---
 ## Creating a user:
 ```js
+ /api/createuser
  Create User route
  enters:
  [GET]
@@ -31,6 +32,7 @@ write up WIP
 ---
 ## Get a user:
 ```js
+ /api/getuser
  Get User route
  enters:
  [GET]
@@ -53,6 +55,7 @@ write up WIP
 ---
 ## Get user info
 ```js
+ /api/getuserinfo
  Get User Info route
  enters:
  [GET]
@@ -73,6 +76,7 @@ write up WIP
 ---
 ## Get server time
 ```js
+ /api/servertime
  Time route
  returns:
  [Json]
