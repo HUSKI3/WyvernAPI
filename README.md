@@ -30,7 +30,7 @@ write up WIP
 ```
 
 # WyvernAPI related
-<br>
+---
 ## Get server time
 ```js
  Time route
