@@ -6,10 +6,10 @@ Different languages have different ways to access it.
 write up WIP
 
 # User related
-
+---
 ## Creating a user:
 ```js
- Create User rout
+ Create User route
  enters:
  [GET]
  {username="username"}
@@ -28,7 +28,45 @@ write up WIP
   "EXTRAINFO"
  ]
 ```
+---
+```js
+ Get User route
+ enters:
+ [GET]
+ {token="token"}
 
+ returns:
+ [Json]
+ [
+  ID,
+  "USERNAME",
+  "WYVERNID",
+  "TOKEN",
+  "DATE",
+  "SERVERS",
+  "PLAN",
+  "PROFILE PICTURE",
+  "EXTRAINFO"
+ ]
+```
+---
+```js
+ Get User Info route
+ enters:
+ [GET]
+ {wyvernid="wyvernid"}
+
+ returns:
+ [Json]
+ [
+  ID,
+  "USERNAME",
+  "WYVERNID",
+  "DATE",
+  "PLAN",
+  "PROFILE PICTURE",
+ ]
+```
 # WyvernAPI related
 ---
 ## Get server time
