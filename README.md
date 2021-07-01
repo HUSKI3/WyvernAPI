@@ -1,87 +1,45 @@
-# WyvernAPI
-> The API Docs for Wyvern
-> current API route: http://78.141.209.47:3031/
-## How to connect?
-Different languages have different ways to access it.
-write up WIP
+# Users
+### /api/user
+> requires: user ID
 
-# User related
----
-## Creating a user:
-```js
- /api/createuser
- Create User route
- enters:
- [GET]
- {username="username"}
+returns: (example)
+```json
+{
+  "id": 0,
+  "tag": 0, 
+  "username": "test", 
+  "joined": "01/07/2021 13:25:43"
+}
+```
 
- returns:
- [Json]
- [
-  ID, 
-  "USERNAME", 
-  "WYVERNID", 
-  "TOKEN", 
-  "DATE", 
-  "SERVERS", 
-  "PLAN", 
-  "PROFILE PICTURE",
-  "EXTRAINFO"
- ]
-```
----
-## Get a user:
-```js
- /api/getuser
- Get User route
- enters:
- [GET]
- {token="token"}
+# Messaging
 
- returns:
- [Json]
- [
-  ID,
-  "USERNAME",
-  "WYVERNID",
-  "TOKEN",
-  "DATE",
-  "SERVERS",
-  "PLAN",
-  "PROFILE PICTURE",
-  "EXTRAINFO"
- ]
-```
----
-## Get user info
-```js
- /api/getuserinfo
- Get User Info route
- enters:
- [GET]
- {wyvernid="wyvernid"}
+### /api/chat
+>requires: token, serverid, content, type
 
- returns:
- [Json]
- [
-  ID,
-  "USERNAME",
-  "WYVERNID",
-  "DATE",
-  "PLAN",
-  "PROFILE PICTURE",
- ]
+request arguments: (example)
+```json
+{
+  "token": 1234567890,
+  "serverid": 1234567890, 
+  "content": "hey", 
+  "type": "text"
+}
 ```
-# WyvernAPI related
----
-## Get server time
-```js
- /api/servertime
- Time route
- returns:
- [Json]
- {
-    'dateTime':DATE AND TIME STRING,
-    'requestIp':IPADDRESS,
- }
+returns: (example)
+```json
+{
+  "messageid":123,
+  "status":"sent" // sent or failed
+}
 ```
+Content types:
+|type|use case|
+| --- | --- |
+| text | plain text, may contain links |
+|img|contains raw image data|
+|media|contains external media link|
+|embed|contains special wyvern styling|
+
+## /api/history
+> requires: token, serverid, channelid
